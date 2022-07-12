@@ -22,10 +22,10 @@ function getItem(label, key, icon, children, type) {
 }
 
 const items = [
-  getItem('Home', 'Home', <PieChartOutlined />),
-  getItem('二级菜单', 'sub1', <MailOutlined />, [getItem('Other', 'Other')]),
+  getItem('home', 'home', <PieChartOutlined />),
+  getItem('二级菜单', 'sub1', <MailOutlined />, [getItem('other', 'other')]),
   getItem('二级菜单', 'sub2', <AppstoreOutlined />, [
-    getItem('三级菜单', 'sub3', null, [getItem('User', 'User')]),
+    getItem('三级菜单', 'sub3', null, [getItem('user', 'user')]),
   ]),
 ]
 
