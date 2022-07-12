@@ -1,6 +1,6 @@
 function User() {
   return (
-    <div className="App">
+    <div>
       <h1>User</h1>
     </div>
   )

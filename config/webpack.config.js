@@ -221,8 +221,6 @@ module.exports = function (webpackEnv) {
       // We inferred the "public path" (such as / or /my-project) from homepage.
       // publicPath: paths.publicUrlOrPath,
 
-      publicPath: '/lowCode/',
-
       library: { name: `${appPackageJson.name}-[name]`, type: 'umd' },
 
       globalObject: 'window',

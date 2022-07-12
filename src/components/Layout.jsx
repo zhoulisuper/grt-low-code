@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-
 import { Layout } from 'antd'
 
 import GHeader from './Header'
@@ -13,7 +12,7 @@ const { Header, Footer, Content } = Layout
 
 function GLayout() {
   return (
-    <Layout>
+    <Layout style={{ minHeight: '100vh' }}>
       <Header>
         <GHeader />
       </Header>
