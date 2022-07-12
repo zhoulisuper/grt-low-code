@@ -5,42 +5,10 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
-import { Route, Link, BrowserRouter as Router, Routes } from 'react-router-dom'
-
-import Home from './components/Home'
-import Other from './components/About'
-
-import { createBrowserHistory } from 'history'
-
-const baseUrl = '/lowCode'
-console.log(baseUrl)
-
-const history = createBrowserHistory({ basename: baseUrl })
-
 if (!window.__POWERED_BY_QIANKUN__) {
   ReactDOM.render(
     <React.StrictMode>
-      <Router history={history}>
-        <div>
-          <ul className="nav">
-            <li>
-              <Link to={{ pathname: '/' }}>App</Link>
-            </li>
-            <li>
-              <Link to={`${baseUrl}/Home`}>Home</Link>
-            </li>
-            <li>
-              <Link to={`${baseUrl}/Other`}>Other</Link>
-            </li>
-          </ul>
-          <hr />
-          <Routes>
-            <Route exact path="/" element={<App />} />
-            <Route path={`${baseUrl}/Home`} element={<Home />} />
-            <Route path={`${baseUrl}/Other`} element={<Other />} />
-          </Routes>
-        </div>
-      </Router>
+      <App />
     </React.StrictMode>,
     document.getElementById('root')
   )
@@ -59,27 +27,7 @@ export async function mount(props) {
 
   ReactDOM.render(
     <React.StrictMode>
-      <Router history={history}>
-        <div>
-          <ul className="nav">
-            <li>
-              <Link to={`${baseUrl}/`}>App</Link>
-            </li>
-            <li>
-              <Link to={`${baseUrl}/Home`}>Home</Link>
-            </li>
-            <li>
-              <Link to={`${baseUrl}/Other`}>Other</Link>
-            </li>
-          </ul>
-          <hr />
-          <Routes>
-            <Route path={`${baseUrl}/`} element={<App />} />
-            <Route path={`${baseUrl}/Home`} element={<Home />} />
-            <Route path={`${baseUrl}/Other`} element={<Other />} />
-          </Routes>
-        </div>
-      </Router>
+      <App />
     </React.StrictMode>,
     props.container
       ? props.container.querySelector('#root')
