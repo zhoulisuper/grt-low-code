@@ -3,8 +3,8 @@ import GHeader from './Header'
 import GAsider from './Asider'
 import { routerItems } from '../router'
 import React, { Suspense } from 'react'
-
 import { Routes, Route, Navigate } from 'react-router-dom'
+import style from './style.module.less'
 
 // loading页面
 const Loading = () => (
@@ -58,6 +58,9 @@ const rotuerViews = (routerItems) => {
 function GLayout() {
   return (
     <Layout style={{ minHeight: '100vh' }}>
+      <div style={{ color: 'yellow' }} className={style.demo}>
+        eeeee
+      </div>
       <Header>
         <GHeader />
       </Header>
